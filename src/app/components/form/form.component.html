@@ -1,0 +1,1604 @@
+<div class="contenedor-general">
+    <h2>ENCUESTA SOBRE PERCEPCIÓN DEL RACISMO, XENOFOBIA Y DISCRIMINACIÓN RACIAL EN EL ECUADOR
+    </h2>
+    <p>Estimado(a) participante: <br>
+        <br>
+        La "Encuesta sobre Percepción del Racismo, Xenofobia y Discriminación Racial en el Ecuador". tiene como objetivo
+        recopilar información valiosa y representativa acerca de las actitudes, experiencias y percepciones relacionadas
+        con el racismo, la xenofobia y la discriminación racial en el contexto ecuatoriano. <br>
+        <br>
+        Antes de comenzar, nos gustaría enfatizar la importancia de la confidencialidad, la protección de datos y la
+        ética del encuestador en este proceso. Nos comprometemos a garantizar la privacidad y el anonimato de todos los
+        participantes. Toda la información recopilada seráutilizada únicamente con fines de investigación. <br>
+        <br>
+        <b>Confidencialidad y Protección de Datos:</b> <br>
+        Todos los datos personales recopilados durante esta encuesta se manejarán de acuerdo con las leyes y
+        regulaciones vigentes en materia de protección de datos. Su participación es voluntaria y anónima, lo que
+        significa que su identidad no será revelada en ningún momento. Los datos se utilizarán de forma agregada y
+        anónima para garantizar la confidencialidad y la privacidad de los participantes. <br>
+        <br>
+        <b>Ética del encuestador:</b> <br>
+        <br>
+        El equipo encargado de esta encuesta está compuesto por estudiantes y docentes comprometidos con los más altos
+        estándares éticos. Todos los miembros del equipo han sido capacitados para garantizar el respeto, la objetividad
+        y la imparcialidad durante todo el proceso de recopilación de datos. Además, se adhieren a los principios de la
+        Declaración Universal de Derechos Humanos y respetan la diversidad, la igualdad y la no discriminación.
+        Participación Voluntaria:
+        Enfatizamos que su participación es completamente voluntaria. Sus opiniones son valiosas independientemente de
+        su posición personal. <br>
+        <br>
+        <b>Información de Contacto</b> <br>
+        <br>
+        Preguntas o inquietudes durante el proceso de la encuesta, comunicarse con nuestro equipo de investigación:
+        <br><br> <u>jc.guanche@unesco.org</u> &nbsp; <u>katherine.chala@uaw.edu.ec </u>
+        &nbsp;<u>saperez1@utpl.edu.ec</u> <br>
+        <br>
+        <b>Consentimiento</b> <br>
+        <br>
+        Por favor indique en el siguiente casillero su decisión sobre la participación en esta investigación.
+    </p>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="contenedor-inputs-principal">
+            <div class="contenedor-inputs">
+                <div class="input-estilo">
+                    <input type="radio" name="Consentimiento" formControlName="Consentimiento" value="Si"> Si
+                </div>
+                <div class="input-estilo">
+                    <input type="radio" name="Consentimiento" formControlName="Consentimiento" value="No"> No
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-inputs-principal">
+            Ingresar Fecha de Hoy
+        </div>
+        <div class="contenedor-inputs-principal">
+            <div class="input-estilo">
+                <input type="date" formControlName="Fecha" id="fecha">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="formulario.get('Consentimiento')?.value === 'Si'" class="contenido-formulario">
+    <mat-tab-group class="custom-tab-group">
+        <mat-tab label="PRIMERA PARTE">
+            <div class="contenedor-general">
+                <h2>DATOS SOCIODEMOGRÁFICO</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="contenedor-inputs-principal">
+                        Edad
+                    </div>
+                    <div class="input-estilo">
+                        <div class="input-estilo">
+                            <input type="text" class="form-control" formControlName="Edad">
+                        </div>
+                    </div>
+
+                    <p>
+                        Opciones: <br />
+                        <input type="checkbox" name="opcion1" formArrayName="opcion" value="baño"> Male<br>
+                        <input type="checkbox" name="opcion2" formArrayName="opcion" value="casa"> Female<br>
+                        <input type="checkbox" name="opcion3" formArrayName="opcion" value="luz"> Other
+                    </p>
+
+
+
+                </form>
+            </div>
+        </mat-tab>
+
+
+
+        <mat-tab label="SEGUNDA PARTE">
+
+            <div class="contenedor-general">
+                <h2>Marginación socioeconómica y Racialización de la pobreza</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="contenedor-inputs-principal">
+                        1. ¿Usted considera que las personas de su misma identificación étnica que la suya tienen las
+                        mismas o mejores condiciones de vida?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P1" formControlName="P1" value="Mejor"> Mejor
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P1" formControlName="P1" value="Peor"> Peor
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P1" formControlName="P1" value="Igual"> Igual
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P1" formControlName="P1" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P1" formControlName="P1" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        2. ¿Usted considera que las personas con una identidad étnica distinta a la suya, tienen mejores
+                        o peores condiciones de vida que la suya?*<br>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P2" formControlName="P2" value="Mejor"> Mejor
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P2" formControlName="P2" value="Peor"> Peor
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P2" formControlName="P2" value="Igual"> Igual
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P2" formControlName="P2" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P2" formControlName="P2" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        3. Hasta qué punto diría que está orgulloso/a de ser mestizo, blanco, afrodescendiente,
+                        indígena, montubio u otro*
+                        (de acuerdo a cómo se auto identifique)
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P3" formControlName="P3" value="Muy orgulloso"> Muy orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P3" formControlName="P3" value="Orgulloso"> Orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P3" formControlName="P3" value="Menos orgulloso"> Menos
+                                orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P3" formControlName="P3" value="Poco orgulloso "> Poco
+                                orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P3" formControlName="P3" value="Nada orgulloso"> Nada
+                                orgulloso
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        4. En general, ¿Cuán satisfecho está usted con la vida que lleva actualmente?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P4" formControlName="P4" value="Muy orgulloso"> Muy orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P4" formControlName="P4" value="Orgulloso"> Orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P4" formControlName="P4" value="Menos orgulloso"> Menos
+                                orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P4" formControlName="P4" value="Poco orgulloso "> Poco
+                                orgulloso
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P4" formControlName="P4" value="Nada orgulloso"> Nada
+                                orgulloso
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        5. ¿De los siguientes grupos socioculturales quien cree usted que puede salir más fácilmente de
+                        la pobreza?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P5">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione- </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="Todos los anteriores">Todos los anteriores</option>
+                                        <option value="Ninguno">Ninguno</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        8. De los siguientes grupos ¿Cuáles cree usted que tendrían facilidad de crédito bancario en el
+                        Ecuador?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P8">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione- </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p>
+
+                    </p>
+
+
+
+
+
+
+                </form>
+            </div>
+
+
+        </mat-tab>
+
+        <mat-tab label="TERCERA PARTE">
+
+            <div class="contenedor-general">
+
+                <h2>Percepción racismo, perjuicio racial y discriminación</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+                    <div class="contenedor-inputs-principal">
+                        10. ¿Cree usted que en el Ecuador existe racismo y discriminación hacia las personas
+                        negras/afrodescendientes/afroecuatorianas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P10" formControlName="P10" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P10" formControlName="P10" value="No"> No
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        11. ¿Cree usted que en el Ecuador existe racismo y discriminación hacia las personas de pueblos
+                        y nacionalidades indígenas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P11" formControlName="P11" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P11" formControlName="P11" value="No"> No
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        12. ¿En qué medida se presenta el racismo hacia las personas
+                        negras/afrodescendientes/afroecuatorianas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P12">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Mucho">Mucho</option>
+                                        <option value="Ni mucho ni poco">Ni mucho ni poco </option>
+                                        <option value="Poco">Poco</option>
+                                        <option value="No existe el racismo en el Ecuador">No existe el racismo en el
+                                            Ecuador</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        13. ¿En qué medida se presenta el racismo hacia las personas de pueblos y nacionalidades
+                        indígenas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P13">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Mucho">Mucho</option>
+                                        <option value="Ni mucho ni poco">Ni mucho ni poco </option>
+                                        <option value="Poco">Poco</option>
+                                        <option value="No existe el racismo en el Ecuador">No existe el racismo en el
+                                            Ecuador</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contenedor-inputs-principal">
+                        17. Piensa cómo son la mayoría de los ecuatorianos, y muestra tu opinión ante las siguientes
+                        afirmaciones
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>De acuerdo</th>
+                                    <th>Desacuerdo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Los afrodescendientes malgastan el dinero en lujos y tonterías*</td>
+                                    <td>
+                                        <input type="radio" name="P171" formControlName="P171" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P171" formControlName="P171" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas afrodescendientes mantienen una actitud alegre ante la vida*</td>
+                                    <td>
+                                        <input type="radio" name="P172" formControlName="P172" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P172" formControlName="P172" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Las personas afrodescendientes no les gusta trabajar*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P173" formControlName="P173" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P173" formControlName="P173" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas afrodescendientes siempre están enojadas y me asustan*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P174" formControlName="P174" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P174" formControlName="P174" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cuando veo a alguien negro/afrodescendiente que no conozco me cruzo la calle
+                                        porque me da miedo*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P175" formControlName="P175" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P175" formControlName="P175" value="En desacuerdo">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Respeto y estoy de acuerdo con los rituales afrodescendientes*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P176" formControlName="P176" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P176" formControlName="P176" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas afrodescendientes viven en la pobreza porque no se esfuerzan
+                                        demasiado*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P177" formControlName="P177" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P177" formControlName="P177" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas afrodescendientes aportan al fortalecimiento de la identidad
+                                        cultural.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P178" formControlName="P178" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P178" formControlName="P178" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="contenedor-inputs-principal">
+                        18. Piensa cómo son la mayoría de los ecuatorianos, y muestra tu opinión ante las siguientes
+                        afirmaciones
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>De acuerdo</th>
+                                    <th>Desacuerdo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Los pueblos y nacionalidades indígenas viven en la pobreza porque no se
+                                        esfuerzan demasiado.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P181" formControlName="P181" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P181" formControlName="P181" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Los pueblos y nacionalidades indígenas deberían vivir solo en sus territorios
+                                        originarios-ancestrales.*</td>
+                                    <td>
+                                        <input type="radio" name="P182" formControlName="P182" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P182" formControlName="P182" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Las personas de pueblos y nacionalidades indígenas son desaseadas.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P183" formControlName="P183" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P183" formControlName="P183" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas solo se quejan.*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P184" formControlName="P184" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P184" formControlName="P184" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas en su mayoría son violentas
+                                        en las manifestaciones.*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P185" formControlName="P185" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P185" formControlName="P185" value="En desacuerdo">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas son ignorantes.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P186" formControlName="P186" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P186" formControlName="P186" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas quieren todo regalado por el
+                                        Estado.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P187" formControlName="P187" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P187" formControlName="P187" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas aportan al fortalecimiento de
+                                        la identidad cultural.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P188" formControlName="P188" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P188" formControlName="P188" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas de pueblos y nacionalidades indígenas ocupan cargos de poder dentro
+                                        y fuera de sus nacionalidades.*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P189" formControlName="P189" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P189" formControlName="P189" value="En desacuerdo">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        20. Piensa cómo son la mayoría de los ecuatorianos, y muestra tu opinión ante las siguientes
+                        afirmaciones
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mucho</th>
+                                    <th>Poco</th>
+                                    <th>Nada</th>
+                                    <th>N/A</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>¿Te sientes molesto por la presencia de personas de otra nacionalidad?*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P201" formControlName="P201" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P201" formControlName="P201" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P201" formControlName="P201" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P201" formControlName="P201" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¿Te molesta la presencia de personas de otra identidad cultural o racial -
+                                        étnica (afrodescendientes o indígenas)?*</td>
+                                    <td>
+                                        <input type="radio" name="P202" formControlName="P202" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P202" formControlName="P202" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P202" formControlName="P202" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P202" formControlName="P202" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ¿Te molesta la presencia de personas de otra religión?*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P203" formControlName="P203" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P203" formControlName="P203" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P203" formControlName="P203" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P203" formControlName="P203" value="N/A">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>¿Te molesta la presencia de personas de la comunidad LGBTIQ+?*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P204" formControlName="P204" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P204" formControlName="P204" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P204" formControlName="P204" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P204" formControlName="P204" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¿Te molesta la presencia de personas de otra clase social?*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P205" formControlName="P205" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P205" formControlName="P205" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P205" formControlName="P205" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P205" formControlName="P205" value="N/A">
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        21. Indique qué percepción tiene usted sobre las siguientes frases:
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Tiene connotación racista</th>
+                                    <th>Es solo una frase</th>
+                                    <th>No sabe</th>
+                                    <th>No responde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>¡Qué cholo!*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¡Aquí hubo mano negra!*</td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Estás en lista negra*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213" value="N/A">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Se te salió el indio*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Le dieron una cachetada con guante blanco*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P215" formControlName="P215"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P215" formControlName="P215"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P215" formControlName="P215" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P215" formControlName="P215" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Soy la oveja negra de la familia*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P216" formControlName="P216"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P216" formControlName="P216"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P216" formControlName="P216" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P216" formControlName="P216" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¡Qué longo!*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P217" formControlName="P217"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P217" formControlName="P217"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P217" formControlName="P217" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P217" formControlName="P217" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¡Trabajo como negro!*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P218" formControlName="P218"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P218" formControlName="P218"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P218" formControlName="P218" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P218" formControlName="P218" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ya parece merienda de negros*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P219" formControlName="P219"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P219" formControlName="P219"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P219" formControlName="P219" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P219" formControlName="P219" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>¡Qué Chimbo!*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P2110" formControlName="P2110"
+                                            value="Tiene connotación racista">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P2110" formControlName="P2110"
+                                            value="Es solo una frase">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P2110" formControlName="P2110" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P2110" formControlName="P2110" value="N/A">
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        22. ¿Cuenta entre sus amigos, centro escolar, trabajo o entorno habitual con muchas, pocas o
+                        ninguna persona de esas características?
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Mucho (mayor a 10)</th>
+                                    <th>Poco (entre 1 a 9)</th>
+                                    <th>No sabe</th>
+                                    <th>No responde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Personas de otra nacionalidad o país*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211"
+                                            value="Mucho (mayor a 10)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211"
+                                            value="Poco (entre 1 a 9)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P211" formControlName="P211" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Personas de otra identidad cultural o racial - étnica (afrodescendientes,
+                                        indígenas o montubios)*</td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212"
+                                            value="Mucho (mayor a 10)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212"
+                                            value="Poco (entre 1 a 9)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P212" formControlName="P212" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ¿Personas de la comunidad LGBTIQ+?*
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213"
+                                            value="Mucho (mayor a 10)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213"
+                                            value="Poco (entre 1 a 9)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P213" formControlName="P213" value="N/A">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Personas de otra clase social*
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214"
+                                            value="Mucho (mayor a 10)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214"
+                                            value="Poco (entre 1 a 9)">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214" value="Nada">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P214" formControlName="P214" value="N/A">
+                                    </td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </mat-tab>
+
+
+        <mat-tab label="CUARTA PARTE">
+            <div class="contenedor-general">
+                <h2>Perfilamiento Racial</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="contenedor-inputs-principal">
+                        24. ¿Qué tipo de personas cree usted que sea proclive a la delincuencia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P24">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        25. ¿De qué grupo poblacional cree usted que ocupa mayormente las cárceles ecuatorianas?
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P25">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        26. ¿Consideras que las personas afrodescendientes tienen un trato justo por parte de las
+                        fuerzas de seguridad y el sistema de justicia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P26">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="No responde">No responde</option>
+                                        <option value="Si">Si</option>
+                                        <option value="No">No</option>
+                                        <option value="No sabe">No sabe</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        27. ¿Consideras que las personas indígenas tienen un trato justo por parte de las fuerzas de
+                        seguridad y el sistema de justicia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P27">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="No responde">No responde</option>
+                                        <option value="Si">Si</option>
+                                        <option value="No">No</option>
+                                        <option value="No sabe">No sabe</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        28. ¿Quién cree usted que tiene mejor acceso a la justicia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P28">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        29. ¿Considera usted que la fiscalía debería tener una unidad especializada para delitos de
+                        discriminación racial?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P29">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                        <option value="Es necesario">Es necesario</option>
+                                        <option value="No es necesario">No es necesario</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        30. Cuando un policía está haciendo controles de seguridad, ¿Quién cree usted que sería
+                        requisado primero?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P30">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </mat-tab>
+        <mat-tab label="QUINTA PARTE">
+            <div class="contenedor-general">
+                <h2>Percepción de la xenofobia</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+                </form>
+            </div>
+        </mat-tab>
+        <mat-tab label="SEXTA PARTE">
+            <div class="contenedor-general">
+                <h2>Percepción de la xenofobia</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="contenedor-inputs-principal">
+                        33. Cuando piensa en mujeres negras/afrodescendientes en el campo laboral, ¿qué cargos considera
+                        usted que desempeñan con mayor frecuencia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P33">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Puestos directivos o de toma de decisiones">Puestos directivos o
+                                            de toma de decisiones</option>
+                                        <option value="Puestos de mando medios, supervision y tecnicos">Puestos de mando
+                                            medios, supervision y tecnicos</option>
+                                        <option value="Puestos operativos, euxiliar de apoyo">Puestos operativos,
+                                            euxiliar de apoyo </option>
+                                        <option value="Empleadas domesticas">Empleadas domesticas</option>
+                                        <option value="Empleadas en el campo/agricultura/artesania">Empleadas en el
+                                            campo/agricultura/artesania</option>
+                                        <option value="No trabajan">No trabajan</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        34. Cuando piensa en mujeres indígenas en el campo laboral, ¿qué cargos considera usted que
+                        desempeñan con mayor frecuencia?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P34">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Puestos directivos o de toma de decisiones">Puestos directivos o
+                                            de toma de decisiones</option>
+                                        <option value="Puestos de mando medios, supervision y tecnicos">Puestos de mando
+                                            medios, supervision y tecnicos</option>
+                                        <option value="Puestos operativos, euxiliar de apoyo">Puestos operativos,
+                                            euxiliar de apoyo </option>
+                                        <option value="Empleadas domesticas">Empleadas domesticas</option>
+                                        <option value="Empleadas en el campo/agricultura/artesania">Empleadas en el
+                                            campo/agricultura/artesania</option>
+                                        <option value="No trabajan">No trabajan</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        35. ¿En su espacio laboral o estudiantil hay alguna persona de la comunidad LGBTIQ+
+                        afroecuatorianos o indígenas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P35" formControlName="P35" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P35" formControlName="P35" value="No"> No
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P35" formControlName="P35" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P35" formControlName="P35" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        37.	 Muestre su opinión ante las siguientes afirmaciones:
+                    </div>
+
+                    <div class="contenedor-inputs-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>De acuerdo</th>
+                                    <th>Desacuerdo</th>
+                                    <th>N/A</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Las mujeres indígenas y afrodescendientes son más cuidadosas en cuanto a su vida sexual y reproducción.
+
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P371" formControlName="P371" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P371" formControlName="P371" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P371" formControlName="P371" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres de pueblos y nacionalidades afrodescendientes e indígenas realizan actividades vinculadas al servicio doméstico.</td>
+                                        <td>
+                                            <input type="radio" name="P372" formControlName="P372" value="De acuerdo">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="P372" formControlName="P372" value="En desacuerdo">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="P372" formControlName="P372" value="N/A">
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Las mujeres afrodescendientes tienen muchos hijos
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P373" formControlName="P373" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P373" formControlName="P373" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P373" formControlName="P373" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres indígenas tienen muchos hijos
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P374" formControlName="P374" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P374" formControlName="P374" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P374" formControlName="P374" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres afrodescendientes e indígenas practican brujería
+
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P375" formControlName="P375" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P375" formControlName="P375" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P375" formControlName="P375" value="N/A">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Las mujeres afrodescendientes son promiscuas, por ello tienden a descuidar su salud sexual y reproductiva.
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P376" formControlName="P376" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P376" formControlName="P376" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P376" formControlName="P376" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres afrodescendientes tienden a ser groseras o violentas y siempre están enojadas
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P377" formControlName="P377" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P377" formControlName="P377" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P377" formControlName="P377" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres indígenas no están capacitadas para ejercer cargos de alto nivel.
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P378" formControlName="P378" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P378" formControlName="P378" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P378" formControlName="P378" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas LGBTIQ+ no están capacitadas para ejercer cargos de alto nivel.
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P379" formControlName="P379" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P379" formControlName="P379" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P379" formControlName="P379" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las personas LGBTIQ+ son portadorxs de enfermedades de transmisión sexual
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3710" formControlName="P3710" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3710" formControlName="P3710" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3710" formControlName="P3710" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres afrodescendientes tienen habilidades físicas más desarrolladas que mujeres de otras etnias.
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3711" formControlName="P3711" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3711" formControlName="P3711" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3711" formControlName="P3711" value="N/A">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Las mujeres afrodescendientes no están capacitadas para ejercer cargos de alto nivel
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3712" formControlName="P3712" value="De acuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3712" formControlName="P3712" value="En desacuerdo">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="P3712" formControlName="P3712" value="N/A">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="contenedor-inputs-principal">
+                        38. ¿Considera usted que el Estado Ecuatoriano es excluyente?*
+                        Es decir, que favorece a unos grupos sociales más que a otros.
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P38" formControlName="P38" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P38" formControlName="P38" value="No"> No
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P38" formControlName="P38" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P38" formControlName="P38" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        39. ¿Considera usted que el Estado Ecuatoriano se preocupa por mejorar las condiciones de la
+                        poblaciones negras, afrodescendientes, afroecuatorianas mediante acciones concretas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P39" formControlName="P39" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P39" formControlName="P39" value="No"> No
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P39" formControlName="P39" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P39" formControlName="P39" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        40. ¿Considera usted que el Estado Ecuatoriano se preocupa por mejorar las condiciones de las
+                        poblaciones indígenas mediante acciones concretas?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P40" formControlName="P40" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P40" formControlName="P40" value="No"> No
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P40" formControlName="P40" value="No Sabe "> No Sabe
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P40" formControlName="P40" value="No Responde"> No Responde
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        41. ¿Cuál de estas poblaciones consideras que es más fácil acceder al empleo adecuado y/o
+                        educación superior de calidad?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P41">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato">
+                                            Afrodescendiente/ Afroecuatoriano/ Negro/ Mulato</option>
+                                        <option value="Indigena">Indigena</option>
+                                        <option value="Montubio/ Montuvio">Montubio/ Montuvio</option>
+                                        <option value="Blanco/ Mestizo">Blanco/ Mestizo</option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        42. ¿Consideras que los medios de comunicación nacionales y la publicidad en el Ecuador
+                        representan adecuadamente a las personas y evitan la perpetuación de estereotipos negativos?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P41">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                        <option value="Representan adecuadame">Representan adecuadame</option>
+                                        <option value="No representan adecuadamente">No representan adecuadamente
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        43. ¿Consideras que los medios de comunicación nacionales y la publicidad en el Ecuador
+                        representan adecuadamente a las personas indígenas y evitan la perpetuación de estereotipos
+                        negativos?*
+                    </div>
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <div class="select">
+                                    <select formControlName="P41">
+                                        <option value="" disabled selected hidden> &nbsp; - Seleccione - </option>
+                                        <option value="No sabe">No sabe</option>
+                                        <option value="No responde">No responde</option>
+                                        <option value="Representan adecuadame">Representan adecuadame</option>
+                                        <option value="No representan adecuadamente">No representan adecuadamente
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </mat-tab>
+        <mat-tab label="SEPTIMA PARTE">
+            <div class="contenedor-general">
+                <h2>Acciones afirmativas y lucha contra el racismo</h2>
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="contenedor-inputs-principal">
+
+                        44. Para reparar los daños históricos producto del colonialismo, racismo y exclusión en el
+                        Ecuador
+                        ¿está de acuerdo que se otorguen medidas adicionales, medidas compensatorias, reparadoras o de
+                        acción afirmativa a los grupos sociales vulnerados (afroecuatorianos e indígenas)?*
+
+                        <br>
+                        <br>
+                        Entendiéndose el concepto de Acción Afirmativa o acciones positivas, como aquellas "medidas
+                        orientadas a favorecer y posicionar a determinadas personas o grupos, ya sea con el fin de
+                        eliminar
+                        o reducir las desigualdades de género, socio-cultural o económico que los afectan, pero también
+                        asimilado al conjunto de acciones legislativas y administrativas de carácter temporal,
+                        coherentes
+                        con el propósito de remediar situaciones de desventaja o exclusión y discriminación de un grupo
+                        humano, en algún aspecto de su vida". (Pastor Elias Murillo, las medidas de acción afirmativa o
+                        medidas especiales: para reparar las injusticias históricas y la discriminación)
+                    </div>
+
+
+
+
+                    <div class="contenedor-inputs-principal">
+                        <div class="contenedor-inputs">
+                            <div class="input-estilo">
+                                <input type="radio" name="P44" formControlName="P44" value="Si"> Si
+                            </div>
+                            <div class="input-estilo">
+                                <input type="radio" name="P44" formControlName="P44" value="No"> No
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </mat-tab>
+
+
+    </mat-tab-group>
+</div>
+<div *ngIf="formulario.get('Consentimiento')?.value === 'Si'" class="contenido-formulario">
+    <div class="contenedor-enviar">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <input type="submit" value="Enviar" class="btn btn-info custom-button">
+        </form>
+    </div>
+    <div class="contenedor-mensajeError">
+        <div *ngIf="formulario.invalid " class="error-message">
+            ¡Debe completar todos los campos!
+        </div>
+    </div>
+</div>
